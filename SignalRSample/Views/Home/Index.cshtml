@@ -1,8 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+<div style="width: 100%; margin: 0 auto; background-color: #fff; height: auto; padding: 20px; >
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+  <div style="width: 100%;  background-color: #fff; height: 150px; padding: 40px;">
+        <h1 style="font-size: 36px; font-weight: bold;">Deathly Hallow Race</h1>
+        <div style="display: inline;">
+            <p style="display: inline; margin-right: 20px;">Invisibility Cloak -  <span id="cloakCounter" style="font-size: 25px; color: #007bff; "></span></p>
+            <p style="display: inline; margin-right: 20px;">Resurrection Stone -  <span id="stoneCounter" style="font-size: 25px; color: #007bff;"></span></p>
+            <p style="display: inline;">Elder Wand -  <span id="wandCounter" style="font-size: 25px; color: #007bff;"></span></p>
+        </div>
+        <div style="width: 100%; padding: 10px; background-color: #f0f0f0; margin-top: 20px;">
+            <div style="display: block;">
+                <p style="font-weight: bold;">URLs to Vote:</p>
+                <p style="margin-bottom: 10px;">Invisibility Cloak - <a href="https://localhost:7001/home/deathlyhallows?type=cloak">https://localhost:7001/home/deathlyhallows?type=cloak</a></p>
+                <p style="margin-bottom: 10px;">Resurrection Stone - <a href="https://localhost:7001/home/deathlyhallows?type=stone">https://localhost:7001/home/deathlyhallows?type=stone</a></p>
+                <p>Elder Wand - <a href="https://localhost:7001/home/deathlyhallows?type=wand">https://localhost:7001/home/deathlyhallows?type=wand</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; max-width: 600px; text-align: center;">
+        <h1 style="color: #333; font-size: 36px; margin-bottom: 20px;">Total Views and Active Connections</h1>
+        <div style="display: flex; justify-content: space-around;">
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="color: #007bff; font-size: 28px; margin-bottom: 10px;">Total Views</h2>
+                <span id="tvc" style="font-size: 48px; color: #007bff; font-weight: bold; display: block;"></span> <!-- Replace with actual total views count -->
+                <span style="font-size: 24px; color: #333; display: block; margin-top: 10px;">Website Openings</span>
+            </div>
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="color: #007bff; font-size: 28px; margin-bottom: 10px;">Active Connections</h2>
+                <span id="ac" style="font-size: 48px; color: #007bff; font-weight: bold; display: block;"></span> <!-- Replace with actual active connections count -->
+                <span style="font-size: 24px; color: #333; display: block; margin-top: 10px;">Active Connections</span>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <script src="~/js/signalr.js"></script>
+    <script src="~/js/userCount.js"></script>
+    <script src="~/js/deathlyHallows.js"></script>
+
